@@ -12,8 +12,7 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
-      - run: yarn install
-      - run: yarn test
+      - run: echo "hey jude !!"
 
 workflows:
  version: 2
