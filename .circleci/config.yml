@@ -13,6 +13,8 @@ jobs:
     steps:
       - checkout
       - run: yarn install
+      - run: dockerize --wait tcp://localhost:27017 -timeout 2m
+      - run: node databse/loadTestMongoData.js
       - run: yarn test
 
 workflows:
