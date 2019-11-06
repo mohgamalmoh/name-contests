@@ -5,6 +5,7 @@ module.exports = mPool => ({
     return mPool.collection('users')
       .find({ userId: { $in: userIds } })
       .toArray()
+
       .then(rows => orderedFor(rows, userIds, 'userId', true));
   }
 });
